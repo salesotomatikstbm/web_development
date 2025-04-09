@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web Development Course - Day-wise Curriculum</title>
+    <title>Day Order Web Development Curriculum</title>
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -14,7 +14,7 @@
             padding: 20px;
             background-color: #f9f9f9;
         }
-
+        
         h1 {
             text-align: center;
             color: #2c3e50;
@@ -22,14 +22,14 @@
             padding-bottom: 15px;
             border-bottom: 2px solid #3498db;
         }
-
+        
         .subtitle {
             text-align: center;
             font-style: italic;
             color: #7f8c8d;
             margin-bottom: 40px;
         }
-
+        
         table {
             width: 100%;
             border-collapse: collapse;
@@ -37,13 +37,13 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             background-color: white;
         }
-
+        
         th, td {
             padding: 12px 15px;
             text-align: left;
             border-bottom: 1px solid #ddd;
         }
-
+        
         th {
             background-color: #3498db;
             color: white;
@@ -51,74 +51,319 @@
             text-transform: uppercase;
             letter-spacing: 0.5px;
         }
-
+        
         tr:nth-child(even) {
             background-color: #f2f2f2;
         }
-
+        
         tr:hover {
             background-color: #e3f2fd;
         }
-
-        .setup-section {
-            background-color: #fff3cd;
-            padding: 20px;
-            border-left: 5px solid #ffc107;
-            margin-bottom: 40px;
+        
+        .project-title {
+            font-weight: bold;
+            color: #2c3e50;
         }
-
-        .setup-section h2 {
-            margin-top: 0;
-            color: #856404;
+        
+        .day-number {
+            font-weight: bold;
+            text-align: center;
+            color: #e74c3c;
+        }
+        
+        .focus-area {
+            font-style: italic;
+            color: #16a085;
+        }
+        
+        .topic {
+            font-weight: 500;
+        }
+        
+        .details {
+            font-size: 0.9em;
+        }
+        
+        .project-row {
+            border-top: 2px solid #3498db;
+        }
+        
+        .project-row td {
+            padding-top: 20px;
+        }
+        
+        .intro-day {
+            background-color: #fffde7;
+        }
+        
+        .deployment {
+            font-weight: bold;
+            color: #8e44ad;
+        }
+        
+        .html-badge {
+            display: inline-block;
+            background-color: #e74c3c;
+            color: white;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-size: 0.8em;
+            margin-right: 5px;
+        }
+        
+        .css-badge {
+            display: inline-block;
+            background-color: #3498db;
+            color: white;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-size: 0.8em;
+            margin-right: 5px;
+        }
+        
+        .js-badge {
+            display: inline-block;
+            background-color: #f1c40f;
+            color: #333;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-size: 0.8em;
+            margin-right: 5px;
+        }
+        
+        .bs-badge {
+            display: inline-block;
+            background-color: #563d7c;
+            color: white;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-size: 0.8em;
+            margin-right: 5px;
+        }
+        
+        .git-badge {
+            display: inline-block;
+            background-color: #f05033;
+            color: white;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-size: 0.8em;
+            margin-right: 5px;
         }
     </style>
 </head>
 <body>
-    <h1>Web Development Course - Day-wise Curriculum</h1>
-    <p class="subtitle">1.5 hr * 20 classes  (2 per week over ~3 months)</p>
-
+    <h1>Day Order Web Development Curriculum</h1>
+    <p class="subtitle">3 Month (18-day) intensive course (1.5 hours/day) with 4 projects</p>
+    
     <table>
         <thead>
             <tr>
+                <th>Project</th>
+                <th>Focus</th>
                 <th>Day</th>
                 <th>Topic</th>
                 <th>Details</th>
             </tr>
         </thead>
         <tbody>
-            <tr><td>Day 1</td><td>Intro to Web Development</td><td>Web Page vs Website, URLs, Browsers</td></tr>
-            <tr><td>Day 2</td><td><a href="#setup">VS Code & Live Server</a></td><td>Installing VS Code, using Live Server</td></tr>
-            <tr><td>Day 3</td><td>HTML Basics</td><td>Structure, headings, paragraphs, images, links</td></tr>
-            <tr><td>Day 4</td><td>CSS Basics</td><td>Selectors, color, fonts, box model</td></tr>
-            <tr><td>Day 5</td><td>CSS Layout</td><td>Display, margin, padding, position</td></tr>
-              <tr><td>Day 6</td><td>Project 1: Portfolio</td><td>Homepage, About, Contact, Skills, Projects</td></tr>
-            <tr><td>Day 7</td><td>Project 1: Review</td><td>Fix design/code issues</td></tr>
-            <tr><td>Day 8</td><td><a href="#setup">GitHub & Deployment</a></td><td>Push with Git, deploy with GitHub Pages</td></tr>
-          
-            <tr><td>Day 9</td><td>Responsive Design</td><td>Containers, media queries, breakpoints</td></tr>
-            <tr><td>Day 10</td><td>Navigation & Footer</td><td>Sticky navbar, footer section</td></tr>
-            <tr><td>Day 11</td><td>CSS Effects</td><td>Hover, transitions, animation basics</td></tr>
-            <tr><td>Day 12</td><td>Project 2: Restaurant/E-commerce</td><td>Layout & responsive structure</td></tr>
-            <tr><td>Day 13</td><td>Project 2: Review</td><td>Fix and polish project</td></tr>
-            <tr><td>Day 14</td><td>Bootstrap Basics</td><td>CDN, grid, navbar</td></tr>
-            <tr><td>Day 15</td><td>Bootstrap Components</td><td>Cards, modals, carousel, forms</td></tr>
-            <tr><td>Day 16</td><td>Project 3: Landing Page</td><td>Product/event with Bootstrap</td></tr>
-            <tr><td>Day 17</td><td>JavaScript Basics</td><td>Variables, data types, functions</td></tr>
-            <tr><td>Day 18</td><td>JS Events & DOM</td><td>onClick, getElementById, innerText</td></tr>
-            <tr><td>Day 19</td><td>Project 4: Interactive Form</td><td>text, number, radio, dropdown</td></tr>
-            <tr><td>Day 20</td><td>Final Review</td><td>Recap & polish all projects</td></tr>
+            <!-- Introduction Day -->
+            <tr class="intro-day">
+                <td class="project-title">Introduction</td>
+                <td class="focus-area">Web Fundamentals</td>
+                <td class="day-number">1</td>
+                <td class="topic">Introduction to Web Development</td>
+                <td class="details">
+                    • What is Web Development? (Frontend, Backend, Full-stack)<br>
+                    • Web Page vs Website explained<br>
+                    • How browsers render pages<br>
+                    • URL structure and components<br>
+                    • Development setup (VS Code, extensions)
+                </td>
+            </tr>
+            
+            <!-- Project 1 -->
+            <tr class="project-row">
+                <td class="project-title" rowspan="4">School/Portfolio Website</td>
+                <td class="focus-area" rowspan="4"><span class="html-badge">HTML</span> <span class="css-badge">CSS</span> Basics</td>
+                <td class="day-number">2</td>
+                <td class="topic">HTML Document Structure</td>
+                <td class="details">
+                    • <code>&lt;!DOCTYPE html&gt;</code>, <code>&lt;html&gt;</code>, <code>&lt;head&gt;</code>, <code>&lt;body&gt;</code><br>
+                    • Meta tags (charset, viewport)<br>
+                    • Headings, paragraphs, lists
+                </td>
+            </tr>
+            <tr>
+                <td class="day-number">3</td>
+                <td class="topic">CSS Fundamentals</td>
+                <td class="details">
+                    • Color, background-color, fonts<br>
+                    • Text alignment and styling<br>
+                    • Box model (padding, margin, border)
+                </td>
+            </tr>
+            <tr>
+                <td class="day-number">4</td>
+                <td class="topic">Navigation & Layout</td>
+                <td class="details">
+                    • Semantic tags (header, nav, section, footer)<br>
+                    • Links and anchor tags<br>
+                    • Flexbox basics (display: flex)
+                </td>
+            </tr>
+            <tr>
+                <td class="day-number">5</td>
+                <td class="topic">Project Development</td>
+                <td class="details">
+                    • Build complete school/portfolio website<br>
+                    • Include: Homepage, About, Contact sections<br>
+                    • Prepare for GitHub deployment
+                </td>
+            </tr>
+            
+            <!-- GitHub Day -->
+            <tr class="project-row">
+                <td class="project-title">GitHub Masterclass</td>
+                <td class="focus-area"><span class="git-badge">GitHub</span> <span class="git-badge">Version Control</span></td>
+                <td class="day-number">6</td>
+                <td class="topic">GitHub Fundamentals</td>
+                <td class="details">
+                    • GitHub account creation and setup<br>
+                    • Creating repositories (init, clone)<br>
+                    • Basic Git commands (add, commit, push, pull)<br>
+                    • Branching and merging basics<br>
+                    • GitHub Pages deployment<br>
+                    • Deploy Project 1 (School/Portfolio site)<br>
+                    • Share live URLs and collaborate
+                </td>
+            </tr>
+            
+            <!-- Project 2 -->
+            <tr class="project-row">
+                <td class="project-title" rowspan="4">Restaurant/E-commerce</td>
+                <td class="focus-area" rowspan="4"><span class="html-badge">HTML</span> <span class="css-badge">CSS</span> Intermediate</td>
+                <td class="day-number">7</td>
+                <td class="topic">Responsive Design</td>
+                <td class="details">
+                    • Media queries basics<br>
+                    • Responsive images (object-fit)<br>
+                    • Viewport units (vw, vh)
+                </td>
+            </tr>
+            <tr>
+                <td class="day-number">8</td>
+                <td class="topic">CSS Grid Layout</td>
+                <td class="details">
+                    • Grid template columns<br>
+                    • Grid gap and alignment<br>
+                    • Creating complex layouts
+                </td>
+            </tr>
+            <tr>
+                <td class="day-number">9</td>
+                <td class="topic">UI Components</td>
+                <td class="details">
+                    • Card designs with shadows<br>
+                    • Tables and forms styling<br>
+                    • Hover effects and transitions
+                </td>
+            </tr>
+            <tr>
+                <td class="day-number">10</td>
+                <td class="topic">Project Development & Deployment</td>
+                <td class="details">
+                    • Complete responsive restaurant/e-commerce site<br>
+                    • Menu/Product listings with grid<br>
+                    • <span class="deployment">GitHub Pages:</span> Deploy project<br>
+                    • Share live URL
+                </td>
+            </tr>
+            
+            <!-- Project 3 -->
+            <tr class="project-row">
+                <td class="project-title" rowspan="4">Landing Page/Event Website</td>
+                <td class="focus-area" rowspan="4"><span class="bs-badge">Bootstrap</span> <span class="css-badge">CSS</span></td>
+                <td class="day-number">11</td>
+                <td class="topic">Bootstrap Fundamentals</td>
+                <td class="details">
+                    • Grid system (containers, rows, columns)<br>
+                    • Utility classes (spacing, display)<br>
+                    • Responsive breakpoints
+                </td>
+            </tr>
+            <tr>
+                <td class="day-number">12</td>
+                <td class="topic">Bootstrap Components</td>
+                <td class="details">
+                    • Navbar with toggler<br>
+                    • Cards and carousels<br>
+                    • Forms and buttons
+                </td>
+            </tr>
+            <tr>
+                <td class="day-number">13</td>
+                <td class="topic">Animations & Effects</td>
+                <td class="details">
+                    • CSS transitions<br>
+                    • Keyframe animations<br>
+                    • Scroll effects
+                </td>
+            </tr>
+            <tr>
+                <td class="day-number">14</td>
+                <td class="topic">Project Development & Deployment</td>
+                <td class="details">
+                    • Complete landing page with Bootstrap<br>
+                    • Hero section with call-to-action<br>
+                    • <span class="deployment">GitHub Pages:</span> Deploy project<br>
+                    • Share live URL
+                </td>
+            </tr>
+            
+            <!-- Project 4 -->
+            <tr class="project-row">
+                <td class="project-title" rowspan="4">Registration Forms</td>
+                <td class="focus-area" rowspan="4"><span class="js-badge">JavaScript</span> Basics</td>
+                <td class="day-number">15</td>
+                <td class="topic">JavaScript Basics - Part 1</td>
+                <td class="details">
+                    • Variables and data types<br>
+                    • Operators and conditionals<br>
+                    • Functions basics
+                </td>
+            </tr>
+            <tr>
+                <td class="day-number">16</td>
+                <td class="topic">JavaScript Basics - Part 2</td>
+                <td class="details">
+                    • DOM manipulation (getElementById)<br>
+                    • Event listeners (click, submit)<br>
+                    • ClassList manipulation
+                </td>
+            </tr>
+            <tr>
+                <td class="day-number">17</td>
+                <td class="topic">Form Handling & Validation</td>
+                <td class="details">
+                    • Accessing form values<br>
+                    • Email and password validation<br>
+                    • Error message display<br>
+                    • Preventing default submission
+                </td>
+            </tr>
+            <tr>
+                <td class="day-number">18</td>
+                <td class="topic">Final Project & Deployment</td>
+                <td class="details">
+                    • Complete interactive registration form<br>
+                    • Client-side validation<br>
+                    • Success feedback<br>
+                    • <span class="deployment">GitHub Pages:</span> Final deployment<br>
+                    • Share live URL
+                </td>
+            </tr>
         </tbody>
     </table>
-
-    <div class="setup-section" id="setup">
-        <h2>Setup Tools (Day 2 & 8)</h2>
-        <p><strong>VS Code:</strong> Download from <a href="https://code.visualstudio.com">code.visualstudio.com</a></p>
-        <p><strong>GitHub Basics:</strong></p>
-        <ul>
-            <li>Create GitHub account: <a href="https://github.com">github.com</a></li>
-            <li>Use GitHub Pages to host projects for free</li>
-            <li>Follow steps to push project using VS Code Git or GitHub Desktop</li>
-        </ul>
-    </div>
 </body>
 </html>
