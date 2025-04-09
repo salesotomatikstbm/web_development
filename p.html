@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>23 - Hrs Web Development Curriculum</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #3498db;
+            --secondary-color: #2c3e50;
+            --accent-color: #e74c3c;
+            --success-color: #2ecc71;
+            --warning-color: #f1c40f;
+            --light-color: #f9f9f9;
+            --dark-color: #333;
+            --gray-light: #e0e0e0;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--dark-color);
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: var(--light-color);
+        }
+
+        h1 {
+            color: var(--secondary-color);
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid var(--primary-color);
+            position: relative;
+        }
+
+        h1::after {
+            content: "";
+            position: absolute;
+            bottom: -2px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background-color: var(--accent-color);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0;
+            box-shadow: var(--shadow);
+            overflow: hidden;
+            border-radius: 8px;
+        }
+
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid var(--gray-light);
+            vertical-align: top;
+        }
+
+        th {
+            background-color: var(--primary-color);
+            color: white;
+            font-weight: bold;
+            position: sticky;
+            top: 0;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        tr:hover {
+            background-color: #e6f7ff;
+            transform: scale(1.01);
+            transition: var(--transition);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .day-header {
+            background-color: var(--secondary-color) !important;
+            color: white !important;
+            font-weight: bold;
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        .day-title {
+            display: block;
+            font-size: 1.2em;
+        }
+
+        .day-hours {
+            display: block;
+            font-size: 0.8em;
+            opacity: 0.9;
+        }
+
+        code {
+            background-color: #f0f0f0;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-family: Consolas, monospace;
+            color: var(--accent-color);
+        }
+
+        .icon {
+            margin-right: 8px;
+            color: inherit;
+        }
+
+        .html-concept {
+            border-left: 4px solid var(--accent-color);
+            padding-left: 10px;
+        }
+
+        .css-concept {
+            border-left: 4px solid var(--primary-color);
+            padding-left: 10px;
+        }
+        
+        .js-concept {
+            border-left: 4px solid var(--warning-color);
+            padding-left: 10px;
+        }
+        
+        .project {
+            border-left: 4px solid var(--success-color);
+            padding-left: 10px;
+            font-weight: bold;
+        }
+        
+        .badge {
+            display: inline-block;
+            padding: 3px 8px;
+            border-radius: 20px;
+            font-size: 0.75em;
+            font-weight: bold;
+            margin-right: 8px;
+            color: white;
+        }
+        
+        .badge-html {
+            background-color: var(--accent-color);
+        }
+        
+        .badge-css {
+            background-color: var(--primary-color);
+        }
+        
+        .badge-js {
+            background-color: var(--warning-color);
+            color: #333;
+        }
+        
+        .badge-bs {
+            background-color: #563d7c;
+        }
+        
+        .badge-intro {
+            background-color: #9b59b6;
+        }
+        
+        .highlight {
+            background-color: #fffde7;
+            padding: 2px 4px;
+            border-radius: 3px;
+        }
+        
+        .concept-list {
+            margin: 0;
+            padding-left: 20px;
+        }
+        
+        .concept-list li {
+            margin-bottom: 8px;
+        }
+        
+        @media (max-width: 768px) {
+            table, thead, tbody, th, td, tr {
+                display: block;
+            }
+            
+            th {
+                position: static;
+            }
+            
+            tr {
+                margin-bottom: 15px;
+                box-shadow: var(--shadow);
+                border-radius: 8px;
+            }
+            
+            td {
+                border: none;
+                position: relative;
+                padding-left: 50%;
+            }
+            
+            td:before {
+                position: absolute;
+                left: 10px;
+                width: 45%;
+                padding-right: 10px;
+                white-space: nowrap;
+                font-weight: bold;
+            }
+            
+            td:nth-of-type(1):before { content: "Day"; }
+            td:nth-of-type(2):before { content: "Topics"; }
+            td:nth-of-type(3):before { content: "Description"; }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>23~25 Hours Web Development Curriculum</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Day</th>
+                <th>Topics</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Day 1 - Introduction -->
+            <tr>
+                <td class="day-header" rowspan="6">
+                    <span class="day-title">Day 1</span>
+                    <span class="day-hours">1.5 Hours</span>
+                </td>
+                <td class="intro-concept"><strong><i class="fas fa-globe icon"></i>Introduction to Web Development</strong></td>
+                <td>
+                    <ul class="concept-list">
+                        <li><span class="badge badge-intro">Intro</span> <strong>What is Web Development?</strong> - Overview of frontend, backend, and full-stack</li>
+                        <li><span class="badge badge-intro">Intro</span> <strong>What is a Web Page?</strong> - Basic structure and components</li>
+                        <li><span class="badge badge-intro">Intro</span> <strong>Difference between web page and website</strong></li>
+                        <li><span class="badge badge-intro">Intro</span> <strong>Web Browser and WWW</strong> - How browsers render pages</li>
+                        <li><span class="badge badge-intro">Intro</span> <strong>What is a URL?</strong> - Structure and components</li>
+                        <li><span class="badge badge-intro">Intro</span> <strong>Website development overview</strong> - HTML, CSS, JS with real-life examples</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td class="intro-concept"><strong><i class="fas fa-laptop-code icon"></i>Development Setup</strong></td>
+                <td>
+                    <ul class="concept-list">
+                        <li>Installing and setting up VS Code</li>
+                        <li>Essential extensions (Live Server, Prettier)</li>
+                        <li>Creating your first HTML file</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td class="html-concept"><strong><i class="fab fa-html5 icon"></i>HTML Document Structure</strong></td>
+                <td>
+                    <code>&lt;!DOCTYPE html&gt;</code>, <code>&lt;html&gt;</code>, <code>&lt;head&gt;</code>,
+                    <code>&lt;body&gt;</code><br>
+                    Basic skeleton of HTML documents
+                </td>
+            </tr>
+            <tr>
+                <td class="html-concept"><strong><i class="fab fa-html5 icon"></i>Meta Tags</strong></td>
+                <td>
+                    <code>&lt;meta charset="UTF-8"&gt;</code> (character encoding)<br>
+                    <code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</code>
+                    (responsive design)
+                </td>
+            </tr>
+            <tr>
+                <td class="html-concept"><strong><i class="fab fa-html5 icon"></i>Text Elements</strong></td>
+                <td>
+                    Headings (<code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code>), paragraphs
+                    (<code>&lt;p&gt;</code>),<br>
+                    <code>&lt;strong&gt;</code>, lists (<code>&lt;ul&gt;</code>, <code>&lt;li&gt;</code>)
+                </td>
+            </tr>
+            <tr>
+                <td class="css-concept"><strong><i class="fab fa-css3 icon"></i>Basic Styling</strong></td>
+                <td>
+                    <code>color</code>, <code>background-color</code>, <code>font-family</code>,<br>
+                    <code>font-size</code>, <code>text-align</code>, <code>font-weight</code>
+                </td>
+            </tr>
+
+            <!-- Day 2 -->
+            <tr>
+                <td class="day-header" rowspan="5">
+                    <span class="day-title">Day 2</span>
+                    <span class="day-hours">1.5 Hours</span>
+                </td>
+                <td class="css-concept"><strong><i class="fab fa-css3 icon"></i>Box Model Basics</strong></td>
+                <td>
+                    <code>padding</code>, <code>margin</code>, <code>border</code>, <code>border-radius</code>
+                </td>
+            </tr>
+            <tr>
+                <td class="html-concept"><strong><i class="fab fa-html5 icon"></i>Semantic Tags</strong></td>
+                <td>
+                    <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;section&gt;</code>,
+                    <code>&lt;footer&gt;</code><br>
+                    Meaningful structure and accessibility
+                </td>
+            </tr>
+            <tr>
+                <td class="html-concept"><strong><i class="fab fa-html5 icon"></i>Links & Navigation</strong></td>
+                <td>
+                    <code>&lt;a href="#section-id"&gt;</code> (internal links)<br>
+                    <code>&lt;a href="url"&gt;</code> (external links)
+                </td>
+            </tr>
+            <tr>
+                <td class="css-concept"><strong><i class="fab fa-css3 icon"></i>Navigation Styling</strong></td>
+                <td>
+                    Horizontal nav bar using <code>display: flex</code><br>
+                    Link styling: <code>:hover</code> effects, <code>background-color</code>, <code>padding</code>
+                </td>
+            </tr>
+            <tr>
+                <td class="css-concept"><strong><i class="fab fa-css3 icon"></i>Flexbox Layout</strong></td>
+                <td>
+                    <code>display: flex</code>, <code>flex-wrap</code>, <code>gap</code>, <code>justify-content</code>
+                </td>
+            </tr>
+
+            <!-- Day 3 -->
+            <tr>
+                <td class="day-header" rowspan="5">
+                    <span class="day-title">Day 3</span>
+                    <span class="day-hours">1.5 Hours</span>
+                </td>
+                <td class="css-concept"><strong><i class="fab fa-css3 icon"></i>Responsive Basics</strong></td>
+                <td>
+                    <code>max-width</code>, <code>width: 100%</code><br>
+                    Viewport meta tag implementation
+                </td>
+            </tr>
+            <tr>
+                <td class="html-concept"><strong><i class="fab fa-html5 icon"></i>Images & Multimedia</strong></td>
+                <td>
+                    <code>&lt;img&gt;</code> for images<br>
+                    <code>&lt;iframe&gt;</code> for YouTube videos and Google Maps
+                </td>
+            </tr>
+            <tr>
+                <td class="html-concept"><strong><i class="fab fa-html5 icon"></i>Tables</strong></td>
+                <td>
+                    <code>&lt;table&gt;</code>, <code>&lt;tr&gt;</code>, <code>&lt;th&gt;</code>,
+                    <code>&lt;td&gt;</code><br>
+                    Structuring tabular data
+                </td>
+            </tr>
+            <tr>
+                <td class="css-concept"><strong><i class="fab fa-css3 icon"></i>Image Styling</strong></td>
+                <td>
+                    <code>object-fit: cover</code>, <code>height</code>, <code>border-radius</code><br>
+                    Responsive image techniques
+                </td>
+            </tr>
+            <tr>
+                <td class="css-concept"><strong><i class="fab fa-css3 icon"></i>Table Styling</strong></td>
+                <td>
+                    <code>border</code>, <code>border-collapse</code>, <code>padding</code><br>
+                    Styling table rows and cells
+                </td>
+            </tr>
+
+            <!-- Day 4 -->
+            <tr>
+                <td class="day-header" rowspan="5">
+                    <span class="day-title">Day 4</span>
+                    <span class="day-hours">1.5 Hours</span>
+                </td>
+                <td class="css-concept"><strong><i class="fab fa-css3 icon"></i>Card Design</strong></td>
+                <td>
+                    Custom <code>.card</code> styles using <code>padding</code>, <code>background</code>,
+                    <code>border-radius</code><br>
+                    Box shadow effects
+                </td>
+            </tr>
+            <tr>
+                <td class="html-concept"><strong><i class="fab fa-html5 icon"></i>External Resources</strong></td>
+                <td>
+                    Font Awesome icons: <code>&lt;link rel="stylesheet" href="..."&gt;</code><br>
+                    Using icon libraries
+                </td>
+            </tr>
+            <tr>
+                <td class="html-concept"><strong><i class="fab fa-html5 icon"></i>Dynamic Content</strong></td>
+                <td>
+                    <code>&lt;marquee&gt;</code> for scrolling text (deprecated but used)<br>
+                    Introduction to more modern alternatives
+                </td>
+            </tr>
+            <tr>
+                <td class="css-concept"><strong><i class="fab fa-css3 icon"></i>Grid Layout</strong></td>
+                <td>
+                    <code>display: grid</code>, <code>grid-template-columns</code><br>
+                    Creating responsive layouts
+                </td>
+            </tr>
+            <tr>
+                <td class="css-concept"><strong><i class="fab fa-css3 icon"></i>Section Styling</strong></td>
+                <td>
+                    Custom section classes (<code>.section</code>, <code>.colorful</code>)<br>
+                    Consistent spacing and theming
+                </td>
+            </tr>
+
+            <!-- Project Day 5 -->
+            <tr>
+                <td class="day-header">
+                    <span class="day-title">Day 5</span>
+                    <span class="day-hours">1.5 Hours</span>
+                </td>
+                <td class="project"><strong><i class="fas fa-project-diagram icon"></i>Project 1: School/Portfolio Website</strong></td>
+                <td>
+                    Apply HTML basics and CSS fundamentals to build a simple portfolio or school website<br>
+                    <span class="highlight">Includes: Basic structure, text elements, simple styling, and navigation</span>
+                </td>
+            </tr>
+
+            <!-- Week 2: Intermediate Concepts -->
+            <tr>
+                <td class="day-header" rowspan="5">
+                    <span class="day-title">Day 6</span>
+                    <span class="day-hours">1.5 Hours</span>
+                </td>
+                <td class="html-concept"><strong><i class="fab fa-github icon"></i>Git Basics</strong></td>
+                <td>
+                    Introduction to version control with Git<br>
+                    Basic commands: init, add, commit, status
+                </td>
+            </tr>
+            <tr>
+                <td class="html-concept"><strong><i class="fab fa-github icon"></i>GitHub Setup</strong></td>
+                <td>
+                    Creating repositories<br>
+                    Pushing code to GitHub
+                </td>
+            </tr>
+            <tr>
+                <td class="html-concept"><strong><i class="fab fa-github icon"></i>GitHub Pages</strong></td>
+                <td>
+                    Deploying static websites<br>
+                    Configuring project settings
+                </td>
+            </tr>
+            <tr>
+                <td class="css-concept"><strong><i class="fab fa-css3 icon"></i>CSS Best Practices</strong></td>
+                <td>
+                    Organizing CSS code<br>
+                    Naming conventions (BEM)
+                </td>
+            </tr>
+            <tr>
+                <td class="css-concept"><strong><i class="fab fa-css3 icon"></i>CSS Variables</strong></td>
+                <td>
+                    Custom properties (<code>--main-color</code>)<br>
+                    Theme management
+                </td>
+            </tr>
+
+            <tr>
+                <td class="day-header" rowspan="5">
+                    <span class="day-title">Day 7</span>
+                    <span class="day-hours">1.5 Hours</span>
+                </td>
+                <td class="html-concept"><strong>Semantic HTML</strong></td>
+                <td>
+                    <code>&lt;header&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;footer&gt;</code><br>
+                    <code>&lt;h1&gt;</code>-<code>&lt;h3&gt;</code>, <code>&lt;p&gt;</code> for content structure<br>
+                    Responsive meta tag: <code>&lt;meta name="viewport"&gt;</code>
+                </td>
+            </tr>
+            <tr>
+                <td class="html-concept"><strong>Navigation & Media</strong></td>
+                <td>
+                    Anchor links (<code>#about</code>, <code>#menu</code>)<br>
+                    <code>&lt;img&gt;</code> with alt attributes<br>
+                    Interactive <code>&lt;a&gt;</code> buttons
+                </td>
+            </tr>
+            <tr>
+                <td class="css-concept"><strong>CSS Reset</strong></td>
+                <td>
+                    <code>* { margin: 0; padding: 0; box-sizing: border-box; }</code><br>
+                    Normalizing browser defaults
+                </td>
+            </tr>
+            <tr>
+                <td class="css-concept"><strong>Flexbox Layout</strong></td>
+                <td>
+                    <code>display: flex</code> for nav containers<br>
+                    <code>justify-content</code>, <code>align-items</code><br>
+                    Responsive spacing with <code>gap</code>
+                </td>
+            </tr>
+            <tr>
+                <td class="css-concept"><strong>Basic UX</strong></td>
+                <td>
+                    Clear navigation structure<br>
+                    Readable typography and spacing<br>
+                    Button affordance styling
+                </td>
+            </tr>
+
+            <tr>
+                <td class="day-header" rowspan="5">
+                    <span class="day-title">Day 8</span>
+                    <span class="day-hours">1.5 Hours</span>
+                </td>
+                <td class="css-concept"><strong>CSS Grid</strong></td>
+                <td>
+                    <code>display: grid</code> for menu items<br>
+                    <code>grid-template-columns</code> with <code>repeat(auto-fit, minmax())</code><br>
+                    Responsive image grids
+                </td>
+            </tr>
+            <tr>
+                <td class="css-concept"><strong>Media Queries</strong></td>
+                <td>
+                    <code>@media (max-width: 768px)</code> breakpoints<br>
+                    Mobile-first vs desktop-first approaches<br>
+                    Adjusting layouts for different screens
+                </td>
+            </tr>
+            <tr>
+                <td class="css-concept"><strong>Positioning</strong></td>
+                <td>
+                    <code>position: fixed</code> for sticky headers<br>
+                    Relative vs absolute positioning<br>
+                    Z-index for layering
+                </td>
+            </tr>
+            <tr>
+                <td class="js-concept"><strong>DOM Basics</strong></td>
+                <td>
+                    <code>document.getElementById()</code><br>
+                    <code>classList.toggle()</code><br>
+                    Selecting and modifying elements
+                </td>
+            </tr>
+            <tr>
+                <td class="js-concept"><strong>Mobile Navigation</strong></td>
+                <td>
+                    Hamburger menu toggle<br>
+                    CSS transitions for smooth animations<br>
+                    Event listeners for clicks
+                </td>
+            </tr>
+
+            <tr>
+                <td class="day-header">
+                    <span class="day-title">Day 9</span>
+                    <span class="day-hours">1.5 Hours</span>
+                </td>
+                <td class="project"><strong><i class="fas fa-project-diagram icon"></i>Project 2: Restaurant/E-commerce Website</strong></td>
+                <td>
+                    Build an intermediate website with responsive design and interactive elements
+                </td>
+            </tr>
+
+            <!-- Week 3: Bootstrap Framework -->
+            <tr>
+                <td class="day-header" rowspan="5">
+                    <span class="day-title">Day 10</span>
+                    <span class="day-hours">1.5 Hours</span>
+                </td>
+                <td class="html-concept"><strong><span class="badge badge-bs">Bootstrap</span> Grid System</strong></td>
+                <td>
+                    Container → Row → Column structure<br>
+                    Responsive breakpoints (xs, sm, md, lg, xl, xxl)<br>
+                    <code>.col-{breakpoint}-{columns}</code> classes
+                </td>
+            </tr>
+            <tr>
+                <td class="html-concept"><strong><span class="badge badge-bs">Bootstrap</span> Utilities</strong></td>
+                <td>
+                    Fluid images (<code>.img-fluid</code>)<br>
+                    Display utilities (<code>.d-none .d-md-block</code>)<br>
+                    Spacing utilities (<code>.mt-3 .px-lg-4</code>)
+                </td>
+            </tr>
+            <tr>
+                <td class="html-concept"><strong><span class="badge badge-bs">Bootstrap</span> Navbar</strong></td>
+                <td>
+                    Sticky navigation (<code>.fixed-top</code>)<br>
+                    Mobile toggler with collapse<br>
+                    Scrolled state with JavaScript
+                </td>
+            </tr>
+            <tr>
+                <td class="html-concept"><strong><span class="badge badge-bs">Bootstrap</span> Hero Section</strong></td>
+                <td>
+                    Full-screen hero with <code>.vh-100</code><br>
+                    Background overlay with gradient utilities<br>
+                    Centering content with <code>.d-flex .align-items-center</code>
+                </td>
+            </tr>
+            <tr>
+                <td class="css-concept"><strong>Basic UX Patterns</strong></td>
+                <td>
+                    Semantic HTML5 structure<br>
+                    Accessible navigation (<code>aria-expanded</code>)<br>
+                    Image alt attributes
+                </td>
+            </tr>
+
+            <tr>
+                <td class="day-header" rowspan="5">
+                    <span class="day-title">Day 11</span>
+                    <span class="day-hours">1.5 Hours</span>
+                </td>
+                <td class="html-concept"><strong><span class="badge badge-bs">Bootstrap</span> Card System</strong></td>
+                <td>
+                    Service/Testimonial cards<br>
+                    Card groups and grid integration<br>
+                    Custom hover effects with <code>:hover</code>
+                </td>
+            </tr>
+            <tr>
+                <td class="html-concept"><strong><span class="badge badge-bs">Bootstrap</span> Icons</strong></td>
+                <td>
+                    Icon integration via CDN or SVG<br>
+                    Usage in buttons, cards, and feature lists<br>
+                    Sizing with <code>.bi-{size}</code>
+                </td>
+            </tr>
+            <tr>
+                <td class="html-concept"><strong><span class="badge badge-bs">Bootstrap</span> Image Gallery</strong></td>
+                <td>
+                    Responsive masonry-like grid<br>
+                    <code>object-fit: cover</code> for consistent ratios<br>
+                    Hover zoom effect with <code>transform: scale()</code>
+                </td>
+            </tr>
+            <tr>
+                <td class="html-concept"><strong><span class="badge badge-bs">Bootstrap</span> About Section</strong></td>
+                <td>
+                    Split layout with <code>.row .align-items-center</code><br>
+                    Feature highlights with icons<br>
+                    Responsive column ordering
+                </td>
+            </tr>
+            <tr>
+                <td class="css-concept"><strong>Visual Hierarchy</strong></td>
+                <td>
+                    Typography utilities (<code>.display-5 .text-muted</code>)<br>
+                    Color contrast for readability<br>
+                    Consistent spacing system
+                </td>
+            </tr>
+
+            <tr>
+                <td class="day-header">
+                    <span class="day-title">Day 12</span>
+                    <span class="day-hours">1.5 Hours</span>
+                </td>
+                <td class="project"><strong><i class="fas fa-project-diagram icon"></i>Project 3: Landing Page/Event Website</strong></td>
+                <td>
+                    Create a responsive landing page using Bootstrap with animations
+                </td>
+            </tr>
+
+            <!-- Week 4: JavaScript & Forms -->
+            <tr>
+                <td class="day-header" rowspan="5">
+                    <span class="day-title">Day 13</span>
+                    <span class="day-hours">1.5 Hours</span>
+                </td>
+                <td class="js-concept"><strong><span class="badge badge-js">JS</span> DOM Access</strong></td>
+                <td>
+                    <code>document.getElementById()</code><br>
+                    Getting values (<code>.value</code> property)<br>
+                    Checking radio/checkbox status
+                </td>
+            </tr>
+            <tr>
+                <td class="js-concept"><strong><span class="badge badge-js">JS</span> Event Handling</strong></td>
+                <td>
+                    <code>onclick</code> event on buttons<br>
+                    Creating <code>submitForm()</code> function<br>
+                    Preventing default form submission
+                </td>
+            </tr>
+            <tr>
+                <td class="js-concept"><strong><span class="badge badge-js">JS</span> Conditional Logic</strong></td>
+                <td>
+                    <code>if...else</code> for gender selection<br>
+                    Validating terms checkbox<br>
+                    Basic form validation checks
+                </td>
+            </tr>
+            <tr>
+                <td class="js-concept"><strong><span class="badge badge-js">JS</span> User Feedback</strong></td>
+                <td>
+                    <code>alert()</code> for data summary<br>
+                    Showing success message (<code>.classList.remove("d-none")</code>)<br>
+                    Error highlighting
+                </td>
+            </tr>
+            <tr>
+                <td class="js-concept"><strong><span class="badge badge-js">JS</span> Form Reset</strong></td>
+                <td>
+                    <code>form.reset()</code> method<br>
+                    Clearing all fields programmatically<br>
+                    Resetting validation states
+                </td>
+            </tr>
+
+            <tr>
+                <td class="day-header" rowspan="5">
+                    <span class="day-title">Day 14</span>
+                    <span class="day-hours">1.5 Hours</span>
+                </td>
+                <td class="html-concept"><strong><span class="badge badge-html">HTML</span> Form Structure</strong></td>
+                <td>
+                    <code>&lt;form&gt;</code>, <code>&lt;input&gt;</code>, <code>&lt;select&gt;</code>, <code>&lt;textarea&gt;</code><br>
+                    Proper labeling with <code>&lt;label&gt;</code><br>
+                    Input types (text, email, password, etc.)
+                </td>
+            </tr>
+            <tr>
+                <td class="html-concept"><strong><span class="badge badge-html">HTML</span> Form Attributes</strong></td>
+                <td>
+                    <code>placeholder</code> for hints<br>
+                    <code>required</code> for validation<br>
+                    <code>name</code> and <code>id</code> attributes
+                </td>
+            </tr>
+            <tr>
+                <td class="css-concept"><strong><span class="badge badge-bs">Bootstrap</span> Form Styling</strong></td>
+                <td>
+                    <code>.form-control</code> for inputs<br>
+                    <code>.form-label</code> for labels<br>
+                    <code>.form-select</code> for dropdowns
+                </td>
+            </tr>
+            <tr>
+                <td class="js-concept"><strong><span class="badge badge-js">JS</span>Simple Form Validation</strong></td>
+                <td>
+                    Client-side validation<br>
+                    Error message display<br>
+                    Preventing invalid submissions
+                </td>
+            </tr>
+            <tr>
+                <td class="js-concept"><strong><span class="badge badge-js">JS</span> Form Submission</strong></td>
+                <td>
+                    Handling form data<br>
+                    Form reset functionality<br>
+                    Success feedback
+                </td>
+            </tr>
+
+            <tr>
+                <td class="day-header">
+                    <span class="day-title">Day 15</span>
+                    <span class="day-hours">1.5 Hours</span>
+                </td>
+                <td class="project"><strong><i class="fas fa-project-diagram icon"></i>Project 4: Registration Forms</strong></td>
+                <td>
+                    Build interactive forms with JavaScript validation
+                </td>
+            </tr>
+
+          
+        </tbody>
+    </table>
+</body>
+
+</html>
