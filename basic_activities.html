@@ -36,14 +36,14 @@
             margin-bottom: 40px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             background-color: white;
-            table-layout: fixed; /* Ensures consistent column widths */
+            table-layout: fixed;
         }
         
         th, td {
             padding: 12px 15px;
             text-align: left;
             border-bottom: 1px solid #ddd;
-            vertical-align: middle; /* Ensures vertical alignment */
+            vertical-align: middle;
         }
         
         th {
@@ -62,20 +62,10 @@
             background-color: #e3f2fd;
         }
         
-        .project-title {
-            font-weight: bold;
-            color: #2c3e50;
-        }
-        
         .day-number {
             font-weight: bold;
             text-align: center;
             color: #e74c3c;
-        }
-        
-        .focus-area {
-            font-style: italic;
-            color: #16a085;
         }
         
         .topic {
@@ -92,11 +82,10 @@
         
         .project-row td {
             padding-top: 20px;
-            vertical-align: middle; /* Ensures content is centered vertically */
         }
         
         .project-row:last-child td {
-            padding-bottom: 20px; /* Extra padding for the last row */
+            padding-bottom: 20px;
         }
         
         .intro-day {
@@ -166,18 +155,15 @@
     <table>
         <thead>
             <tr>
-                <th>Project</th>
-                <th>Focus</th>
                 <th>Day</th>
                 <th>Topic</th>
                 <th>Details</th>
+                <th>Class Activity</th>
             </tr>
         </thead>
         <tbody>
             <!-- Introduction Day -->
             <tr class="intro-day">
-                <td class="project-title">Introduction</td>
-                <td class="focus-area">Web Fundamentals</td>
                 <td class="day-number">1</td>
                 <td class="topic">Introduction to Web Development</td>
                 <td class="details">
@@ -187,12 +173,14 @@
                     • URL structure and components<br>
                     • Development setup (VS Code, extensions)
                 </td>
+                <td class="details">
+                    • Setup development environment<br>
+                    • Create first HTML file
+                </td>
             </tr>
             
             <!-- Project 1 -->
             <tr class="project-row">
-                <td class="project-title" rowspan="4">School/Portfolio Website</td>
-                <td class="focus-area" rowspan="4"><span class="html-badge">HTML</span> <span class="css-badge">CSS</span> Basics</td>
                 <td class="day-number">2</td>
                 <td class="topic">HTML</td>
                 <td class="details">
@@ -202,6 +190,10 @@
                     • Design & Styling <br>
                     • Content Structuring<br>
                     • Advanced Embeds & Media
+                </td>
+                <td class="details">
+                    • Create basic page structure<br>
+                    • Add headings and paragraphs
                 </td>
             </tr>
             <tr>
@@ -213,6 +205,10 @@
                     • Basics & Introduction <br>
                     • Color, Background & Borders <br>
                 </td>
+                <td class="details">
+                    • Add images and links<br>
+                    • Apply basic styling
+                </td>
             </tr>
             <tr>
                 <td class="day-number">4</td>
@@ -222,6 +218,10 @@
                     • Text & Fonts<br>
                     • CSS Layout Systems
                 </td>
+                <td class="details">
+                    • Style navigation menu<br>
+                    • Create page layout
+                </td>
             </tr>
             <tr>
                 <td class="day-number">5</td>
@@ -229,12 +229,14 @@
                 <td class="details">
                     • Project Guidance
                 </td>
+                <td class="details">
+                    • Work on portfolio project<br>
+                    • Instructor feedback
+                </td>
             </tr>
             
             <!-- GitHub Day -->
             <tr class="project-row">
-                <td class="project-title">Git & GitHub</td>
-                <td class="focus-area"><span class="git-badge">GitHub</span> <span class="git-badge">Version Control</span></td>
                 <td class="day-number">6</td>
                 <td class="topic">GitHub Fundamentals</td>
                 <td class="details">
@@ -244,18 +246,24 @@
                     • Deploy Project 1 (School/Portfolio site)<br>
                     • Share live URLs and collaborate
                 </td>
+                <td class="details">
+                    • Create GitHub account<br>
+                    • Deploy first project
+                </td>
             </tr>
             
             <!-- Project 2 -->
             <tr class="project-row">
-                <td class="project-title" rowspan="4">Restaurant/E-commerce</td>
-                <td class="focus-area" rowspan="4"><span class="html-badge">HTML</span> <span class="css-badge">CSS</span> Intermediate</td>
                 <td class="day-number">7</td>
                 <td class="topic">CSS (Media queries)</td>
                 <td class="details">
                     • Media queries basics<br>
                     • Responsive images (object-fit)<br>
                     • Viewport units (vw, vh)
+                </td>
+                <td class="details">
+                    • Create responsive menu<br>
+                    • Adjust layout for mobile
                 </td>
             </tr>
             <tr>
@@ -266,6 +274,10 @@
                     • CSS Layout Systems<br>
                     • Layout gap and alignment
                 </td>
+                <td class="details">
+                    • Implement hamburger menu<br>
+                    • Practice flexbox/grid
+                </td>
             </tr>
             <tr>
                 <td class="day-number">9</td>
@@ -275,26 +287,36 @@
                     • Advanced Selectors & Elements<br>
                     • Animation & Effects
                 </td>
+                <td class="details">
+                    • Create image gallery<br>
+                    • Add hover effects
+                </td>
             </tr>
             <tr>
                 <td class="day-number">10</td>
                 <td class="topic">Project Development & Deployment</td>
                 <td class="details">
                     • Project Guidance<br>
-                    • <span class="deployment">GitHub Pages:</span> Deploy project<br>
+                    • GitHub Pages: Deploy project<br>
                     • Share live URL
+                </td>
+                <td class="details">
+                    • Finalize restaurant site<br>
+                    • Deploy to GitHub
                 </td>
             </tr>
             
             <!-- Project 3 -->
             <tr class="project-row">
-                <td class="project-title" rowspan="3">Landing Page/Event Website</td>
-                <td class="focus-area" rowspan="3"><span class="bs-badge">Bootstrap</span> <span class="css-badge">CSS</span></td>
                 <td class="day-number">11</td>
                 <td class="topic">Bootstrap</td>
                 <td class="details">
                     • Basics<br>
                     • UI Components
+                </td>
+                <td class="details">
+                    • Setup Bootstrap<br>
+                    • Create navbar with Bootstrap
                 </td>
             </tr>
             <tr>
@@ -304,36 +326,48 @@
                     • Responsive Design<br>
                     • Animation & Effects
                 </td>
+                <td class="details">
+                    • Create responsive cards<br>
+                    • Add Bootstrap animations
+                </td>
             </tr>
             <tr>
                 <td class="day-number">13</td>
                 <td class="topic">Project Development & Deployment</td>
                 <td class="details">
                     • Project Guidance<br>
-                    • <span class="deployment">GitHub Pages:</span> Deploy project<br>
+                    • GitHub Pages: Deploy project<br>
                     • Share live URL
+                </td>
+                <td class="details">
+                    • Complete landing page<br>
+                    • Deploy to GitHub
                 </td>
             </tr>
             
             <!-- Project 4 -->
             <tr class="project-row">
-                <td class="project-title" rowspan="4">Registration Forms</td>
-                <td class="focus-area" rowspan="4"><span class="html-badge">HTML</span><span class="js-badge">JavaScript</span> Basics</td>
-            </tr>
-            <tr>
                 <td class="day-number">14</td>
                 <td class="topic">HTML & Javascript</td>
                 <td class="details">
-                    • Forms & Inputs <br>
+                    • Forms & Inputs<br>
                     • JS Core Concepts
+                </td>
+                <td class="details">
+                    • Create contact form<br>
+                    • Basic form validation
                 </td>
             </tr>
             <tr>
                 <td class="day-number">15</td>
                 <td class="topic">JavaScript</td>
                 <td class="details">
-                    • Functions <br>
+                    • Functions<br>
                     • DOM
+                </td>
+                <td class="details">
+                    • Create interactive elements<br>
+                    • DOM manipulation exercises
                 </td>
             </tr>
             <tr>
@@ -341,8 +375,12 @@
                 <td class="topic">Project Development & Deployment</td>
                 <td class="details">
                     • Project Guidance<br>
-                    • <span class="deployment">GitHub Pages:</span> Deploy project<br>
+                    • GitHub Pages: Deploy project<br>
                     • Share live URL
+                </td>
+                <td class="details">
+                    • Finalize registration form<br>
+                    • Deploy final project
                 </td>
             </tr>
         </tbody>

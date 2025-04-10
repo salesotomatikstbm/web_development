@@ -109,11 +109,11 @@
       background-color: var(--css-color);
     }
 
-    .bootstrap-row td {
+    .bootstrap-row td[rowspan] {
       background-color: var(--bootstrap-color);
     }
 
-    .js-row td {
+    .js-row td[rowspan] {
       background-color: var(--js-color);
     }
 
@@ -199,11 +199,11 @@
         background-color: var(--css-color);
       }
       
-      .bootstrap-row td {
+      .bootstrap-row td[rowspan] {
         background-color: var(--bootstrap-color);
       }
       
-      .js-row td {
+      .js-row td[rowspan] {
         background-color: var(--js-color);
       }
     }
@@ -239,8 +239,8 @@
     <table>
       <thead>
         <tr>
-          <th>Topic</th>
-          <th>Subtopics Covered</th>
+          <th>Technology</th>
+          <th>Topics Covered</th>
           <th>Description</th>
         </tr>
       </thead>
@@ -263,18 +263,18 @@
           <td data-label="Description">Tables, Lists, Block & Inline, Div Element, class Attribute, id Attribute</td>
         </tr>
         <tr class="html-row">
-          <td data-label="Subtopics Covered">Advanced Embeds & Media</td>
-          <td data-label="Description">Iframes, File Paths</td>
+          <td data-label="Subtopics Covered">Multimedia</td>
+          <td data-label="Description">Media, Video, Audio, YouTube</td>
         </tr>
         <tr class="html-row">
           <td data-label="Subtopics Covered">Forms & Inputs</td>
           <td data-label="Description">Forms, Form Attributes, Input Types</td>
         </tr>
         <tr class="html-row">
-          <td data-label="Subtopics Covered">Multimedia</td>
-          <td data-label="Description">Media, Video, Audio, YouTube</td>
+          <td data-label="Subtopics Covered">Advanced Embeds & Media</td>
+          <td data-label="Description">Iframes, File Paths</td>
         </tr>
-        
+
         <tr class="css-row">
           <td rowspan="9">CSS Curriculum</td>
           <td data-label="Subtopics Covered">Basics & Introduction</td>
@@ -285,12 +285,16 @@
           <td data-label="Description">Colors, Backgrounds color</td>
         </tr>
         <tr class="css-row">
+          <td data-label="Subtopics Covered">Text & Fonts</td>
+          <td data-label="Description">Text, Fonts, Icons, Links, Lists</td>
+        </tr>
+        <tr class="css-row">
           <td data-label="Subtopics Covered">Box Model & Spacing</td>
           <td data-label="Description">Borders, Margins, Padding, Height/Width</td>
         </tr>
         <tr class="css-row">
-          <td data-label="Subtopics Covered">Text & Fonts</td>
-          <td data-label="Description">Text, Fonts, Icons, Links, Lists</td>
+          <td data-label="Subtopics Covered">CSS Layout Systems</td>
+          <td data-label="Description">Flexbox, Grid</td>
         </tr>
         <tr class="css-row">
           <td data-label="Subtopics Covered">Layout & Positioning</td>
@@ -308,17 +312,25 @@
           <td data-label="Subtopics Covered">Responsive Design</td>
           <td data-label="Description">Media Queries, Responsive Web Design</td>
         </tr>
-        <tr class="css-row">
-          <td data-label="Subtopics Covered">CSS Layout Systems</td>
-          <td data-label="Description">Flexbox, Grid</td>
-        </tr>
-        
+       
         <tr class="bootstrap-row">
-          <td>Bootstrap Curriculum</td>
-          <td data-label="Subtopics Covered">All Topics</td>
-          <td data-label="Description">Containers, Grid Basic, Typography, Colors, Buttons, Navbar, Forms, Grid System, Flexbox, Responsive sizes: XSmall, Small, Medium, Large, XLarge, XXL</td>
+          <td rowspan="4">Bootstrap Curriculum</td>
+          <td data-label="Subtopics Covered">Basics</td>
+          <td data-label="Description">Containers, Typography, Colors</td>
         </tr>
-        
+        <tr class="bootstrap-row">
+          <td data-label="Subtopics Covered">UI Components</td>
+          <td data-label="Description">Buttons, Navbar, Forms</td>
+        </tr>
+        <tr class="bootstrap-row">
+          <td data-label="Subtopics Covered">Flexbox & Grid</td>
+          <td data-label="Description">Flexbox, Grid System</td>
+        </tr>
+        <tr class="bootstrap-row">
+          <td data-label="Subtopics Covered">Responsive Design</td>
+          <td data-label="Description">Responsive sizes: XSmall, Small, Medium, Large, XLarge, XXL</td>
+        </tr>
+
         <tr class="js-row">
           <td rowspan="2">JS Curriculum</td>
           <td data-label="Subtopics Covered">Core Concepts</td>
