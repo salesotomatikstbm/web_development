@@ -5,25 +5,44 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Web Development Curriculum</title>
   <style>
+    :root {
+      --html-color: #e3f2fd;
+      --css-color: #e8f5e9;
+      --bootstrap-color: #f3e5f5;
+      --js-color: #fff8e1;
+      --header-color: #2c3e50;
+      --text-color: #333;
+      --light-text: #7f8c8d;
+      --border-color: #e0e0e0;
+      --hover-color: #f5f7fa;
+      --even-row: #f8f9fa;
+    }
+    
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background-color: #f8f9fa;
-      padding: 40px 20px;
-      color: #333;
+      padding: 20px;
+      color: var(--text-color);
+      line-height: 1.6;
     }
 
     h1 {
       text-align: center;
-      font-size: 2.5rem;
-      color: #2c3e50;
+      font-size: clamp(1.8rem, 4vw, 2.5rem);
+      color: var(--header-color);
       margin-bottom: 10px;
     }
 
     .subtitle {
       text-align: center;
-      font-size: 1.2rem;
-      color: #7f8c8d;
+      font-size: clamp(1rem, 2vw, 1.2rem);
+      color: var(--light-text);
       margin-bottom: 30px;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
     }
 
     table {
@@ -33,20 +52,25 @@
       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
       border-radius: 12px;
       overflow: hidden;
+      margin-bottom: 40px;
     }
 
     th, td {
       padding: 16px 20px;
       text-align: left;
-      border-bottom: 1px solid #e0e0e0;
+      border-bottom: 1px solid var(--border-color);
       vertical-align: top;
     }
 
     th {
-      background-color: #343a40;
+      background-color: var(--header-color);
       color: #fff;
       text-transform: uppercase;
-      font-size: 1rem;
+      font-size: 0.9rem;
+      letter-spacing: 0.5px;
+      font-weight: 600;
+      position: sticky;
+      top: 0;
     }
 
     tr:last-child td {
@@ -55,94 +79,257 @@
 
     td {
       background-color: #fff;
+      transition: background-color 0.2s;
+    }
+
+    tr:hover td {
+      background-color: var(--hover-color);
     }
 
     tr:nth-child(even) td {
-      background-color: #f1f1f1;
+      background-color: var(--even-row);
     }
 
-    @media (max-width: 768px) {
-      table, thead, tbody, th, td, tr {
-        display: block;
+    /* Style for rowspan cells */
+    td[rowspan] {
+      background-color: #e9ecef;
+      font-weight: 600;
+      color: var(--header-color);
+      vertical-align: middle;
+      text-align: center;
+      font-size: 1.1rem;
+    }
+
+    /* Different background for each curriculum section */
+    .html-row td[rowspan] {
+      background-color: var(--html-color);
+    }
+
+    .css-row td[rowspan] {
+      background-color: var(--css-color);
+    }
+
+    .bootstrap-row td {
+      background-color: var(--bootstrap-color);
+    }
+
+    .js-row td {
+      background-color: var(--js-color);
+    }
+
+    /* Responsive styles - Tablet */
+    @media (max-width: 992px) {
+      th, td {
+        padding: 14px 16px;
+        font-size: 0.95rem;
       }
-      thead {
+      
+      td[rowspan] {
+        font-size: 1rem;
+      }
+    }
+
+    /* Responsive styles - Mobile */
+    @media (max-width: 768px) {
+      body {
+        padding: 15px 10px;
+      }
+      
+      table {
+        border-radius: 8px;
+      }
+      
+      th {
         display: none;
       }
+      
       tr {
-        margin-bottom: 1rem;
-        border: 1px solid #ccc;
-        border-radius: 10px;
-        padding: 10px;
+        display: block;
+        margin-bottom: 1.5rem;
+        border: 1px solid var(--border-color);
+        border-radius: 8px;
+        overflow: hidden;
         background-color: #fff;
       }
+      
       td {
-        padding: 10px;
+        display: flex;
+        padding: 12px 15px;
         border: none;
+        border-bottom: 1px solid var(--border-color);
+        text-align: right;
         position: relative;
+        min-height: 48px;
+        align-items: center;
+        justify-content: flex-end;
       }
+      
       td::before {
         content: attr(data-label);
-        font-weight: bold;
+        font-weight: 600;
+        position: absolute;
+        left: 15px;
+        width: 45%;
+        text-align: left;
+        color: var(--header-color);
+      }
+      
+      td:last-child {
+        border-bottom: none;
+      }
+      
+      td[rowspan] {
         display: block;
-        color: #444;
-        margin-bottom: 6px;
+        text-align: center;
+        padding: 15px;
+        font-size: 1.1rem;
+        border-bottom: 1px solid var(--border-color);
+        background-color: #e9ecef;
+      }
+      
+      td[rowspan]::before {
+        display: none;
+      }
+      
+      .html-row td[rowspan] {
+        background-color: var(--html-color);
+      }
+      
+      .css-row td[rowspan] {
+        background-color: var(--css-color);
+      }
+      
+      .bootstrap-row td {
+        background-color: var(--bootstrap-color);
+      }
+      
+      .js-row td {
+        background-color: var(--js-color);
+      }
+    }
+
+    /* Small mobile devices */
+    @media (max-width: 480px) {
+      td {
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+        padding: 10px 15px;
+        min-height: auto;
+      }
+      
+      td::before {
+        position: static;
+        width: 100%;
+        margin-bottom: 5px;
+        text-align: left;
+      }
+      
+      td[rowspan] {
+        text-align: center;
       }
     }
   </style>
 </head>
 <body>
+  <div class="container">
+    <h1>Web Development Curriculum</h1>
+    <p class="subtitle">Comprehensive guide to modern web development technologies</p>
 
-  <h1>Web Development Curriculum</h1>
- <br> <br>
-
-  <table>
-    <thead>
-      <tr>
-        <th>HTML</th>
-        <th>CSS</th>
-        <th>Bootstrap</th>
-        <th>JavaScript</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>HTML Structure: <code>&lt;!DOCTYPE&gt;</code>, <code>&lt;html&gt;</code></td>
-        <td>CSS Syntax & Selectors</td>
-        <td>Bootstrap Grid System</td>
-        <td>Variables & Data Types</td>
-      </tr>
-      <tr>
-        <td>Headings & Paragraphs</td>
-        <td>Colors, Fonts, Text Styling</td>
-        <td>Responsive Breakpoints</td>
-        <td>Functions & Conditionals</td>
-      </tr>
-      <tr>
-        <td>Lists & Anchor Tags</td>
-        <td>Box Model: Padding, Margin</td>
-        <td>Navbar Components</td>
-        <td>DOM Manipulation</td>
-      </tr>
-      <tr>
-        <td>Semantic Tags: nav, section</td>
-        <td>Flexbox Layout</td>
-        <td>Cards & Buttons</td>
-        <td>Event Listeners</td>
-      </tr>
-      <tr>
-        <td>Images & Alt Attributes</td>
-        <td>Grid Layout</td>
-        <td>Carousels & Modals</td>
-        <td>Form Validation</td>
-      </tr>
-      <tr>
-        <td>Forms: input, textarea, select</td>
-        <td>Hover Effects & Transitions</td>
-        <td>Form Styles & Utilities</td>
-        <td>Prevent Default, Alerts</td>
-      </tr>
-    </tbody>
-  </table>
-
+    <table>
+      <thead>
+        <tr>
+          <th>Topic</th>
+          <th>Subtopics Covered</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="html-row">
+          <td rowspan="7">HTML Curriculum</td>
+          <td data-label="Subtopics Covered">Basic Structure & Introduction</td>
+          <td data-label="Description">Introduction, Structure, Editors, Elements</td>
+        </tr>
+        <tr class="html-row">
+          <td data-label="Subtopics Covered">Core Elements</td>
+          <td data-label="Description">Attributes, Headings, Paragraphs, Styles, Comments</td>
+        </tr>
+        <tr class="html-row">
+          <td data-label="Subtopics Covered">Design & Styling</td>
+          <td data-label="Description">Colors, CSS, Links, Images</td>
+        </tr>
+        <tr class="html-row">
+          <td data-label="Subtopics Covered">Content Structuring</td>
+          <td data-label="Description">Tables, Lists, Block & Inline, Div Element, class Attribute, id Attribute</td>
+        </tr>
+        <tr class="html-row">
+          <td data-label="Subtopics Covered">Advanced Embeds & Media</td>
+          <td data-label="Description">Iframes, File Paths</td>
+        </tr>
+        <tr class="html-row">
+          <td data-label="Subtopics Covered">Forms & Inputs</td>
+          <td data-label="Description">Forms, Form Attributes, Input Types</td>
+        </tr>
+        <tr class="html-row">
+          <td data-label="Subtopics Covered">Multimedia</td>
+          <td data-label="Description">Media, Video, Audio, YouTube</td>
+        </tr>
+        
+        <tr class="css-row">
+          <td rowspan="9">CSS Curriculum</td>
+          <td data-label="Subtopics Covered">Basics & Introduction</td>
+          <td data-label="Description">Introduction, Structure, Syntax, Selectors, Comments</td>
+        </tr>
+        <tr class="css-row">
+          <td data-label="Subtopics Covered">Color, Background & Borders</td>
+          <td data-label="Description">Colors, Backgrounds color</td>
+        </tr>
+        <tr class="css-row">
+          <td data-label="Subtopics Covered">Box Model & Spacing</td>
+          <td data-label="Description">Borders, Margins, Padding, Height/Width</td>
+        </tr>
+        <tr class="css-row">
+          <td data-label="Subtopics Covered">Text & Fonts</td>
+          <td data-label="Description">Text, Fonts, Icons, Links, Lists</td>
+        </tr>
+        <tr class="css-row">
+          <td data-label="Subtopics Covered">Layout & Positioning</td>
+          <td data-label="Description">Overflow, Z-index, Float</td>
+        </tr>
+        <tr class="css-row">
+          <td data-label="Subtopics Covered">Advanced Selectors & Elements</td>
+          <td data-label="Description">Pseudo-classes, Attribute Selectors</td>
+        </tr>
+        <tr class="css-row">
+          <td data-label="Subtopics Covered">Animation & Effects</td>
+          <td data-label="Description">2D Transforms, Transitions, Animations</td>
+        </tr>
+        <tr class="css-row">
+          <td data-label="Subtopics Covered">Responsive Design</td>
+          <td data-label="Description">Media Queries, Responsive Web Design</td>
+        </tr>
+        <tr class="css-row">
+          <td data-label="Subtopics Covered">CSS Layout Systems</td>
+          <td data-label="Description">Flexbox, Grid</td>
+        </tr>
+        
+        <tr class="bootstrap-row">
+          <td>Bootstrap Curriculum</td>
+          <td data-label="Subtopics Covered">All Topics</td>
+          <td data-label="Description">Containers, Grid Basic, Typography, Colors, Buttons, Navbar, Forms, Grid System, Flexbox, Responsive sizes: XSmall, Small, Medium, Large, XLarge, XXL</td>
+        </tr>
+        
+        <tr class="js-row">
+          <td rowspan="2">JS Curriculum</td>
+          <td data-label="Subtopics Covered">Core Concepts</td>
+          <td data-label="Description">Variables, data types, operators, conditionals (let, const, var)</td>
+        </tr>
+        <tr class="js-row">
+          <td data-label="Subtopics Covered">Functions & DOM</td>
+          <td data-label="Description">Functions, events (onclick, onchange), DOM access (getElementById)</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </body>
 </html>
